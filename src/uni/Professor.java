@@ -7,8 +7,17 @@ public class Professor {
     public static ArrayList<Professor> professorList = new ArrayList<>();
     public int personID;
     public int majorID;
-    public Professor(int personID, int majorID) {}
+
+    public Professor(int personID, int majorID) {
+        this.personID = personID;
+        this.majorID = majorID;
+    }
     public static Professor findById(int id) {
+        for(Professor professor : professorList) {
+            if (professor.id == id) {
+                return professor;
+            }
+        }
         return null;
     }
 }
