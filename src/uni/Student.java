@@ -11,10 +11,11 @@ public class Student {
     public String studentID;
 
     public Student(int personID, int enteranceYear, int majorID) {
-        this.id = id;
+        this.id = studentList.size() + 1;
         this.personID = personID;
         this.enteranceYear = enteranceYear;
         this.majorID = majorID;
+        studentList.add(this);
     }
     public static Student findById(int id) {
         for(Student student : studentList) {

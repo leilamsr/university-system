@@ -10,6 +10,7 @@ public class Major {
     public int numberOfStudents;
 
     public Major(String name, int capacity){
+        this.id = majorlist.size() + 1;
         this.name = name;
         this.capacity = capacity;
         this.numberOfStudents = 0;

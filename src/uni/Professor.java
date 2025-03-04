@@ -11,6 +11,7 @@ public class Professor {
     public Professor(int personID, int majorID) {
         this.personID = personID;
         this.majorID = majorID;
+        professorList.add(this);
     }
     public static Professor findById(int id) {
         for(Professor professor : professorList) {
