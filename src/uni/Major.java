@@ -12,10 +12,23 @@ public class Major {
     public Major(String name, int capacity){
         this.name = name;
         this.capacity = capacity;
+        this.numberOfStudents = 0;
+        majorlist.add(this);
     }
     public static Major findById(int id){
+        for(Major major : majorlist){
+            if(major.id == id){
+                return major;
+            }
+        }
         return null;
     }
-    public void addStudent() {}
-
+    public void addStudent() {
+        if(numberOfStudents < capacity){
+            numberOfStudents++;
+        }
+        else {
+            System.out.println("خطا! ظرفیت به حداکثر تعداد رسیده است.");
+        }
+    }
 }
