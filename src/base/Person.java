@@ -8,11 +8,18 @@ public class Person {
     public String nationalID;
 
     public Person(String name, String nationlID) {
+        this.id = id;
         this.name = name;
         this.nationalID = nationlID;
+        Personlist.add(this);
     }
 
     public static Person findByID (int id) {
+        for(Person person : Personlist) {
+            if(person.id == id) {
+                return person;
+            }
+        }
         return null;
     }
 }
